@@ -1,0 +1,44 @@
+body{
+    .sideMenuCollapsed{
+        width: 50px;
+        height: calc(100% - 60px);
+        position: absolute;        
+        background-color: #3e3e3e;
+        span{
+            position: fixed;
+            z-index: 1000;
+        }
+        a{float: left;
+        width: 100%;}
+    }
+    .pageContainer{
+        width: calc(100% - 50px);
+        left: 50px;
+        position: relative;
+        padding:.5rem;
+        .contentSection{
+            position: fixed;
+            overflow-y: auto;
+            max-height: calc(100% - 172px);
+        }
+    }  
+    .customCard{
+        margin: .5rem;
+        background-color: #fff;
+        -webkit-transition: -webkit-box-shadow .25s;
+        transition: -webkit-box-shadow .25s;
+        -o-transition: box-shadow .25s;
+        transition: box-shadow .25s;
+        transition: box-shadow .25s, -webkit-box-shadow .25s;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        padding: 5px 10px 5px 15px;
+    } 
+}
+@media only screen and (max-width: 992px){
+    .pageContainer{
+        width: 100% !important;
+        position: static !important;
+        left: 0 !important;
+    }
+}

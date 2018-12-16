@@ -1,0 +1,55 @@
+// 
+.userView{
+    .background{
+        img{width:100%;}
+    }
+}
+.rightMenuCollapsed {
+    .textRight {
+        text-align: right;
+    }
+    #sidenav_3 {
+        text-align: left;
+    }
+    .rightMenuTrigger {
+        position: relative;
+        left: -61px;
+        float: right;
+        background: transparent;
+        z-index: 999;
+        top: -53px;
+        padding: 16px 56px 16px 56px;
+        cursor: pointer;
+        color: transparent;
+    }
+    .userDetail {
+        padding: 25px;
+        text-align: center;
+    }
+    // .customIputs {
+    //     input {
+    //         border: 1px solid #c3c3c3;
+    //         border-radius: 6px;
+    //         padding-left: 10px;
+    //         margin-bottom: 0px;
+    //     }
+    //     label {
+    //         font-size: 13px;
+    //     }
+    // }
+    .collapsible-header {
+        border-bottom: 1px solid #c3c3c3; 
+    }
+    .formBlock {
+        width: 88%;
+        margin: 0px auto;
+    }
+    // .saveButton {
+    //     input {
+    //         background-color: #039be5;
+    //         padding: 5px 10px;
+    //         color: #fff;
+    //     }
+    // }
+    
+}

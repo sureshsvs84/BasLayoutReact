@@ -1,0 +1,14 @@
+@import "color";
+@import "svgColor";
+@import "material-variables";
+@import '../../../node_modules/materialize-sass/sass/materialize.scss';
+@import "core-variables";
+@import "core-style";
+// Custom styles
+@import "custom";
+
+//core Padding Marging Border and radius Reset
+@import "reset";
+
+
+

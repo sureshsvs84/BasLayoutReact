@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+// Font Variables
+$lato-font: 'Lato', sans-serif;   
+
+
+// core overrides
+//--------------------------------------------------
+//          Custom SCSS Reset
+//--------------------------------------------------
+
+//Color Codes
+$white: #fff;
+$lavender : #e1edf4;
+$blue : rgba(16, 123, 180, 1);
+$interaction-blue :#107bb4;
+$black :  #4a4a4a;
+$black-dark :  #1f1f1f;
+$light-black : rgba(74, 74, 74, 1);
+$whitesmoke:#fff;
+$grey : #d8d8d8;
+$light-grey:$whitesmoke;
+$light-grey-1:#eeeeee ;
+$light-grey-2:#c3c3c3 ;
+$light-grey-3:#ededed;
+$light-grey-4:#f7f7f7;
+$grey-1:#6e6e6e;
+$grey-2:rgb(204,204,204);
+$orange:#ef7f41;
+$light-orange:#f5b14b;
+$light-blue:#f0f7ff;
+$red:#f55;
+$pink:#e3355d;
+$midnight-blue:#00395e;
+$light-blue-1:#e2edf5;
+$light-blue-2:#bac9d4;
+$Ocean-Boat-Blue:rgba(16, 123, 180, 1);
+$body-bg:#fff;
+$shadow:rgba(0, 0, 0, 0.1);
+$black-1 : rgb(0,0,0);
+$success: rgb(7, 188, 12);
+$info: #0098f7;
+$warning: #f8c41c;
+$error: #e84d4c;
+
+//Bg-Grey
+$bg-grey:color("grey", "lighten-4") !default;
+//SVG Color
+$SVGColor:color("blue-grey", "lighten-1") !default;
+
+//Page Default Settings
+$base-font-size:1rem;
+
+
+//Nav Bar 
+$nav-bg:$blue;
+$nav-color:$white;
+
+//Spacer
+$spacer-x:1rem;
+$spacer-y:1rem;
+
+//Page Style
+$default-bg-color:$whitesmoke;
+$default-blue-color:$light-blue-1;
+$default-font-color:$black;
+$default-font-color-1:$grey-1;
+$font-color-1: $black-1;
+
+$primary-color:$blue;
+$secondary-color:$orange;
+$default-color : $white;
+$bg-primary-color: $lavender; 
+$bg-default-color: $white;
+$interaction-color: $interaction-blue; 
+$base-border-color:$interaction-blue;
+$base-border-color-1:$light-blue-2;
+
+//Element Style
+$tab-primary-color : $black; 
+$tab-secondary-color: $orange;
+$tab-bgcolor:$light-grey-1;
+$tab-active:$interaction-blue;
+
+//Table Header Style
+$table-header-WOBG-iconColor:$secondary-color;
+$table-header-WBG-iconColor:$white;
+
+
+//Button Style
+$primary-button-color:$orange;
+$primary-button-hover-color:$light-orange;
+$secondary-button-color:$blue;
+$secondary-button-hover-color:$light-blue;
+
+//Font-Style
+$font-primary-color: $light-black; 
+$font-secondary-color : $white;
+$font-highlight-color:$blue;
+$label-primary-color: $grey; 
+$label-secondary-color: $light-grey;
+
+//Card Style
+$card-header-font-size : 1.38rem;
+
+//Scrollbar Color
+$handler:$whitesmoke;
+
+$track:$light-grey-2;
+
+@function calculateRem($size) {
+  $remSize:$size /$base-font-size;
+  @return #{$remSize}rem;
+}
+@mixin fontSize($size) {
+  font-size: calculateRem($size);
+}

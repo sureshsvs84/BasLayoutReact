@@ -1,0 +1,25 @@
+.quickPeriodicity{
+    .dateIcon{
+        float: left;
+        i{
+            top: 2.1rem;
+            position: relative;
+        }
+    }
+    .dataDropdown{
+        float: left;
+        .input-field{
+            margin-top:0;
+            .select-wrapper {
+                input.select-dropdown{
+                    margin-bottom:0;
+                }
+            }
+        }
+        span{
+            padding-left: .8rem;
+        }
+        
+    }
+
+}

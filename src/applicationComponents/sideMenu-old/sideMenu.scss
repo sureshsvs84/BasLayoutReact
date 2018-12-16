@@ -1,0 +1,30 @@
+.sideMenuCollapsed{
+    .btn, .btn-large{
+        background-color: #3e3e3e;
+        box-shadow: none;
+        left: 5px !important;
+        position: absolute;
+    }
+}
+
+.menuButton {
+    background-color: #3e3e3e;
+    box-shadow: none;
+    i {
+        line-height: 40px !important;
+    }
+ }
+ .menuButton:focus {
+     background-color: #3e3e3e;
+     box-shadow: none;
+ }
+ 
+ .menuButton:hover {
+     background-color: #3e3e3e;
+     box-shadow: none;
+ }
+ 
+ .menuButton:active {
+     background-color: #3e3e3e;
+     box-shadow: none;
+ }

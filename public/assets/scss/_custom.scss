@@ -1,0 +1,14 @@
+body{
+    overflow-y: scroll;
+}
+html,
+body {
+    .btn{        
+        text-transform: capitalize;
+        padding:0 0.5rem;
+    }
+    .btn-flat:focus, .btn-flat:hover {
+        background-color:transparnt;
+        box-shadow: none;
+    }
+}

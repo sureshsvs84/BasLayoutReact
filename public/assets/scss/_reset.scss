@@ -1,0 +1,303 @@
+// Here you can add other styles
+//Padding
+body{
+    .inlineBlock{display:inline-block;}
+    .m-0{
+        margin: 0 !important;
+    }
+    .mb-0{
+        margin-bottom: 0 !important;
+    }
+    .mt-0{
+        margin-top: 0 !important;
+    }
+    .ml-0{
+        margin-left: 0 !important;
+    }
+    .mr-0{
+        margin-right: 0 !important;
+    }
+    .m-1{
+        margin: ($spacer-x * .25) ($spacer-y * .25) !important;
+    }
+    .mb-1{
+        margin-bottom: ($spacer-y * .25) !important;
+    }
+    .mt-1{
+        margin-top: ($spacer-y * .25) !important;
+    }
+    .ml-1{
+        margin-left: ($spacer-x * .25) !important;
+    }
+    .mr-1{
+        margin-right: ($spacer-x * .25) !important;
+    }
+    .m-2{
+        margin: ($spacer-x * .5) ($spacer-y * .5) !important;
+    }
+    .mb-2{
+        margin-bottom: ($spacer-y * .5) !important;
+    }
+    .mt-2{
+        margin-top: ($spacer-y * .5) !important;
+    }
+    .ml-2{
+        margin-left: ($spacer-x * .5) !important;
+    }
+    .mr-2{
+        margin-right: ($spacer-x * .5) !important;
+    }
+    .m-3{
+        margin: $spacer-x $spacer-y  !important;
+    }
+    .mb-3{
+        margin-bottom: $spacer-y !important;
+    }
+    .mt-3{
+        margin-top: $spacer-y !important;
+    }
+    .ml-3{
+        margin-left: $spacer-x !important;
+    }
+    .mr-3{
+        margin-right: $spacer-x !important;
+    }
+    .m-4{
+        margin: ($spacer-x * 1.5) ($spacer-y * 1.5)  !important;
+    }
+    .mb-4{
+        margin-bottom: ($spacer-y * 1.5) !important;
+    }
+    .mt-4{
+        margin-top: ($spacer-y * 1.5) !important;
+    }
+    .ml-4{
+        margin-left: ($spacer-x * 1.5) !important;
+    }
+    .mr-4{
+        margin-right: ($spacer-x * 1.5) !important;
+    }
+    .m-5{
+        margin: ($spacer-x * 3) ($spacer-y * 3)  !important;
+    }
+    .mb-5{
+        margin-bottom: ($spacer-y * 3) !important;
+    }
+    .mt-5{
+        margin-top: ($spacer-y * 3) !important;
+    }
+    .ml-5{
+        margin-left: ($spacer-x * 3) !important;
+    }
+    .mr-5{
+        margin-right: ($spacer-x * 3) !important;
+    }
+    
+    
+    .p-0{
+        padding: 0 !important;
+    }
+    .pb-0{
+        padding-bottom:0px !important;
+    }
+    .pt-0{
+        padding-top: 0 !important;
+    }
+    .pl-0{
+        padding-left: 0 !important;
+    }
+    .pr-0{
+        padding-right: 0 !important;
+    }
+    .p-1{
+        padding: ($spacer-x * .25) ($spacer-y * .25) !important;
+    }
+    .pb-1{
+        padding-bottom: ($spacer-y * .25) !important;
+    }
+    .pt-1{
+        padding-top: ($spacer-y * .25) !important;
+    }
+    .pl-1{
+        padding-left: ($spacer-x * .25) !important;
+    }
+    .pr-1{
+        padding-right: ($spacer-x * .25) !important;
+    }
+    .p-2{
+        padding: ($spacer-x * .5) ($spacer-y * .5) !important;
+    }
+    .pb-2{
+        padding-bottom: ($spacer-y * .5) !important;
+    }
+    .pt-2{
+        padding-top: ($spacer-y * .5) !important;
+    }
+    .pl-2{
+        padding-left: ($spacer-x * .5) !important;
+    }
+    .pr-2{
+        padding-right: ($spacer-x * .5) !important;
+    }
+    .p-3{
+        padding: $spacer-x $spacer-y  !important;
+    }
+    .pb-3{
+        padding-bottom: $spacer-y !important;
+    }
+    .pt-3{
+        padding-top: $spacer-y !important;
+    }
+    .pl-3{
+        padding-left: $spacer-x !important;
+    }
+    .pr-3{
+        padding-right: $spacer-x !important;
+    }
+    .p-4{
+        padding: ($spacer-x * 1.5) ($spacer-y * 1.5)  !important;
+    }
+    .pb-4{
+        padding-bottom: ($spacer-y * 1.5) !important;
+    }
+    .pt-4{
+        padding-top: ($spacer-y * 1.5) !important;
+    }
+    .pl-4{
+        padding-left: ($spacer-x * 1.5) !important;
+    }
+    .pr-4{
+        padding-right: ($spacer-x * 1.5) !important;
+    }
+    .p-5{
+        padding: ($spacer-x * 3) ($spacer-y * 3)  !important;
+    }
+    .pb-5{
+        padding-bottom: ($spacer-y * 3) !important;
+    }
+    .pt-5{
+        padding-top: ($spacer-y * 3) !important;
+    }
+    .pl-5{
+        padding-left: ($spacer-x * 3) !important;
+    }
+    .pr-5{
+        padding-right: ($spacer-x * 3) !important;
+    }
+    .w-100{
+        width: 100%;
+    }
+    .h-100{
+        height: 100%;
+    }
+    .p-relative{
+        position: relative;
+    }
+    .bold{       
+        i{
+            font-weight: bold;
+        }
+    }
+    .textCapitalize{
+        text-transform: capitalize !important;
+    }
+    /* width */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: $handler; 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $track; 
+    }
+    select:disabled {
+        color: rgba(0, 0, 0, 0.42);
+        background-color: rgb(235, 235, 228);
+    }
+       
+    .link{
+        color: $interaction-color !important;
+        cursor: pointer;
+    }
+    .customInputs{
+        padding: 5px;
+        border: 1px solid $input-border-color;
+        border-radius: 2px;
+        height: 2.3rem;
+        width: 100%;
+    }
+    select.browser-default{
+        height: 2.3rem;
+        border: 1px solid $input-border-color;
+    }
+    .dangerToast{
+        background-color: $error !important;
+    }
+    .successToast{
+        background-color: $success !important;
+    }
+    .warningToast{
+        background-color: $warning !important;
+    }
+   
+    .d-block{
+        display: block;
+    }
+    .d-inline{
+        display: inline-block;
+    }
+    .flatButton{
+        background-color: transparent !important;
+        border: solid 2px $interaction-color !important;
+        color: $interaction-color !important;
+        line-height: 0 !important;
+        box-shadow: none !important;
+    }
+    .danger-txt{
+        color: $white !important;
+    }
+    .rdw-editor-main {
+         height: 100%;
+        overflow: auto;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #F1F1F1;
+        min-height: 250px;
+    }
+    
+    
+    /* Border Reset */
+    .b-radius-0{
+     border-radius: 0
+    }
+    .btl-radius-0{border-top-left-radius:0;}
+    .btr-radius-0{border-top-right-radius:0;}
+    .bbl-radius-0{border-bottom-left-radius:0;}
+    .bbr-radius-0{border-bottom-right-radius:0;}
+    
+    .btl-radius-2{border-top-left-radius:.5rem!important;}
+    .btr-radius-2{border-top-right-radius:.5rem!important;}
+    .bbl-radius-2{border-bottom-left-radius:.5rem!important;}
+    .bbr-radius-2{border-bottom-right-radius:.5rem!important;}
+    .border-radiusAll-2{border-radius:1.5rem;}
+    .bt-0{border-top:0}
+    .bl-0{border-left:0}
+    .br-0{border-right:0}
+    .bb-0{border-bottom:0}
+    .borderReset{border-top:0;border-left:0;border-right:0;border-bottom:0}
+    .bt-1{border-top:1px solid $light-grey-3; }
+    .bl-1{border-left:1px solid $light-grey-3;}
+    .br-1{border-right:1px solid $light-grey-3;}
+    .br-dotted-1{border-right:1px dotted $light-grey-3;}
+    .bb-1{border-bottom:1px solid $light-grey-3;}
+    .bordered{border: 1px solid $light-grey-3;}
+    /*Reset Padding,margin font border End*/
+    .row{margin-bottom:5px;}
+    .uppercase{text-transform: uppercase}
+}
