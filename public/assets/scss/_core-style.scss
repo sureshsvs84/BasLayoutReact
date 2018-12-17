@@ -1,432 +1,434 @@
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; // cursor: default;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; // cursor: default;
 }
 
 html,
 body {
-  font-family: $lato-font;
-  background-color: $default-bg-color;
-  font-weight:300;
-  font-size:0.98rem;
-  nav {
-    color: $default-font-color;
-  }
-  .col.input-field {
-    width: 98%;
-  } 
-  .fixed{
-    position:fixed;
-
-  }
-  .relative{
-    position: relative;
-  }
-  //-------------------------------
-  // Loader
-  //-------------------------------
-  .overlay-load {
-    background-color: rgba($black-dark, 0.8);
-  }
-  h4{color: $font-primary-color;}
-  label {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: $font-primary-color;
-  }
-  .input-field {
-    label{
-      color: $font-primary-color;
-    }
-  }
-  .label {
-     color: $default-font-color;
-   }
-  .loader {
-    color: $orange;
-    span {
-      color: $white;
-    }
-  }
-  .triangle-topleft {
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 0;
-    border-top: 10px solid $orange;
-    border-right: 10px solid transparent;
-  }
-  //-------------------------------
-  //alert
-  //-------------------------------
-  .alert {
-    @extend .shadow-1;
-    &:hover {
-      @extend .shadow-2;
-    }
-    &-info {
-      background-color: $primary-color-light;
-      border-color: $primary-color-dark;
-      color: $primary-color;
-    }
-    &-success {
-      background-color: color("green", "lighten-5");
-      border-color: color("green", "lighten-3");
-      color: $success-color;
-    }
-    &-warning {
-      background-color: color("yellow", "lighten-4");
-      border-color: color("yellow", "lighten-2");
-      color: color("yellow", "darken-4");
-    }
-    &-danger {
-      background-color: color("red", "lighten-4");
-      border-color: color("red", "lighten-2");
-      color: color("red", "darken-4");
-    }
-  }
-  .shadow-1 {
-    box-shadow: 0 1px 3px rgba($black-dark, 0.12),
-      0 1px 2px rgba($black-dark, 0.24);
-  }
-  .shadow-2 {
-    box-shadow: 0 3px 6px rgba($black-dark, 0.16),
-      0 3px 6px rgba($black-dark, 0.23);
-  } //-------------------------------
-  // Modal
-  //-------------------------------
-  .showModel {
-    position: fixed;
-    left: 0;
-    right: 0;
-    display: block;
-    z-index: 10000;
-    .modal {
-      background-color: $white;
-      .modal-content {
-        .model-title {
-          border-bottom: 1px solid $grey;
-        }
-        p {
-          color: $default-color;
-        }
-      }
-    }
-    .modal-overlay {
-      background: $black-dark;
-    }
-    .dropdown-content li:hover{
-      background-color: $light-blue!important;
-    }
-  } //-------------------------------
-  //Gloabl Class
-  //-------------------------------
-  .black-text {
-    color: $black-dark !important;
-  }
-  svg {
-    path {
-      fill: $SVGColor;
-    }
-  }
-  a {
-    cursor: pointer;
-    ul,
-    li,
-    div,
-    span,
-    p {
-      cursor: pointer;
-    }
-  }
-  s {
-    color: $red;
-  }
-  .font-red {
-    color: $red;
-  }
-  svg.circle {
-    border: 1px solid $secondary-color;
-    background-color: $secondary-color;
-    path {
-      fill: $white;
-    }
-  }
-  .base-font-size {
-    font-size: $base-font-size !important;
-  }
-  .font-primary {
-    color: $primary-color;
-  }
-  .font-default {
-    color: $default-color;
-  }
-  .font-primary-color {
-    color: $font-primary-color;
-  }
-  .font-interaction {
-    color: $interaction-color;
-  }
-  .light-grey-1 {
+    font-family: $lato-font;
     background-color: $default-bg-color;
-  }
-  .light-blue-1 {
-    background-color: $default-blue-color;
-  }
-  .strike {
-    color: $red;
-  }
-  h6.h6 {
-    font-size: 1.23rem;
-    font-weight: 500;
-    border-left: 3px solid $secondary-color;
-  }
-  .btn-prefixIcon {
+    font-weight: 300;
+    font-size: 0.98rem;
+    nav {
+        color: $default-font-color;
+    }
+    .col.input-field {
+        width: 98%;
+    }
+    .fixed {
+        position: fixed;
+    }
+    .relative {
+        position: relative;
+    }
+    .card-panel {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    } //-------------------------------
+    // Loader
+    //-------------------------------
+    .overlay-load {
+        background-color: rgba($black-dark, 0.8);
+    }
+    h4 {
+        color: $font-primary-color;
+    }
+    label {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: $font-primary-color;
+    }
+    .input-field {
+        label {
+            color: $font-primary-color;
+        }
+    }
+    .label {
+        color: $default-font-color;
+    }
+    .loader {
+        color: $orange;
+        span {
+            color: $white;
+        }
+    }
+    .triangle-topleft {
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 0;
+        border-top: 10px solid $orange;
+        border-right: 10px solid transparent;
+    } //-------------------------------
+    //alert
+    //-------------------------------
+    .alert {
+        @extend .shadow-1;
+        &:hover {
+            @extend .shadow-2;
+        }
+        &-info {
+            background-color: $primary-color-light;
+            border-color: $primary-color-dark;
+            color: $primary-color;
+        }
+        &-success {
+            background-color: color("green", "lighten-5");
+            border-color: color("green", "lighten-3");
+            color: $success-color;
+        }
+        &-warning {
+            background-color: color("yellow", "lighten-4");
+            border-color: color("yellow", "lighten-2");
+            color: color("yellow", "darken-4");
+        }
+        &-danger {
+            background-color: color("red", "lighten-4");
+            border-color: color("red", "lighten-2");
+            color: color("red", "darken-4");
+        }
+    }
+    .shadow-1 {
+        box-shadow: 0 1px 3px rgba($black-dark, 0.12), 0 1px 2px rgba($black-dark, 0.24);
+    }
+    .shadow-2 {
+        box-shadow: 0 3px 6px rgba($black-dark, 0.16), 0 3px 6px rgba($black-dark, 0.23);
+    } //-------------------------------
+    // Modal
+    //-------------------------------
+    .showModel {
+        position: fixed;
+        left: 0;
+        right: 0;
+        display: block;
+        z-index: 10000;
+        .modal {
+            background-color: $white;
+            .modal-content {
+                .model-title {
+                    border-bottom: 1px solid $grey;
+                }
+                p {
+                    color: $default-color;
+                }
+            }
+        }
+        .modal-overlay {
+            background: $black-dark;
+        }
+        .dropdown-content li:hover {
+            background-color: $light-blue !important;
+        }
+    } //-------------------------------
+    //Gloabl Class
+    //-------------------------------
+    .black-text {
+        color: $black-dark !important;
+    }
     svg {
-      path {
-        fill: $white;
-      }
+        path {
+            fill: $SVGColor;
+        }
     }
-  }
-  .btn-flat {
-    border: 1px solid #bac9d4;
-    color: $primary-color;
-  }
-  .darkslategray {
-    background-color: $black-dark;
-    color: $white;
-    border: 1px solid $black-dark;
-  }
-  .danger {
-    color: $red;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .ok {
-    color: $success;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .lightGrey {
-    background-color: $light-grey;
-  }
-  .draft {
-    background-color: $grey-1;
-    color: $white;
-  }
-  .Failed {
-    background-color: $red;
-    color: $white;
-  }
-  .Cancelled {
-    background-color: $black;
-    color: $white;
-  }
-  a.disabled {
-    background-color: $light-grey;
-    color: $light-black;
-    border: 1px solid $light-grey-2;
-  }
-  .defaultBox-shadow {
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.08);
-
-    a:focus { outline: none;  }
-  }
-  
-  .close {
-    color: $black;
-    cursor: pointer;
-  }
-  .maskedInput {
-    letter-spacing: 0.25rem;
-  }
-  .autocomplete-content {
-    position: absolute;
-  }
-  [type="radio"]:checked + label:after {
-    transform: scale(1.02);
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    top: 3px;
-    left: 3px;
-}
-[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {
-  background-color: $Ocean-Boat-Blue;
-}
-[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
-  border: 2px solid $Ocean-Boat-Blue;
-}
-[type="radio"]:checked + label:before {
-  border: 2px solid $Ocean-Boat-Blue;
-}
-  input:not([type]).invalid,
-  input:not([type]):focus.invalid,
-  input[type="text"].invalid,
-  input[type="text"]:focus.invalid,
-  input[type="password"].invalid,
-  input[type="password"]:focus.invalid,
-  input[type="email"].invalid,
-  input[type="email"]:focus.invalid,
-  input[type="url"].invalid,
-  input[type="url"]:focus.invalid,
-  input[type="time"].invalid,
-  input[type="time"]:focus.invalid,
-  input[type="date"].invalid,
-  input[type="date"]:focus.invalid,
-  input[type="datetime"].invalid,
-  input[type="datetime"]:focus.invalid,
-  input[type="datetime-local"].invalid,
-  input[type="datetime-local"]:focus.invalid,
-  input[type="tel"].invalid,
-  input[type="tel"]:focus.invalid,
-  input[type="number"].invalid,
-  input[type="number"]:focus.invalid,
-  input[type="search"].invalid,
-  input[type="search"]:focus.invalid,
-  textarea.materialize-textarea.invalid,
-  textarea.materialize-textarea:focus.invalid {
-    box-shadow: none;
-    border-bottom: 2px solid $red;
-  }
-  input:not([type]):focus:not([readonly]),
-  input[type="text"]:focus:not([readonly]),
-  input[type="password"]:focus:not([readonly]),
-  input[type="email"]:focus:not([readonly]),
-  input[type="url"]:focus:not([readonly]),
-  input[type="time"]:focus:not([readonly]),
-  input[type="date"]:focus:not([readonly]),
-  input[type="datetime"]:focus:not([readonly]),
-  input[type="datetime-local"]:focus:not([readonly]),
-  input[type="tel"]:focus:not([readonly]),
-  input[type="number"]:focus:not([readonly]),
-  input[type="search"]:focus:not([readonly]),
-  textarea.materialize-textarea:focus:not([readonly]) {
-    box-shadow: none;
-    border-bottom: 2px solid $Ocean-Boat-Blue;
-  }
-  input:not([type]):disabled,
-  input:not([type])[readonly="readonly"],
-  input[type="text"]:disabled,
-  input[type="text"][readonly="readonly"],
-  input[type="password"]:disabled,
-  input[type="password"][readonly="readonly"],
-  input[type="email"]:disabled,
-  input[type="email"][readonly="readonly"],
-  input[type="url"]:disabled,
-  input[type="url"][readonly="readonly"],
-  input[type="time"]:disabled,
-  input[type="time"][readonly="readonly"],
-  input[type="date"]:disabled,
-  input[type="date"][readonly="readonly"],
-  input[type="datetime"]:disabled,
-  input[type="datetime"][readonly="readonly"],
-  input[type="datetime-local"]:disabled,
-  input[type="datetime-local"][readonly="readonly"],
-  input[type="tel"]:disabled,
-  input[type="tel"][readonly="readonly"],
-  input[type="number"]:disabled,
-  input[type="number"][readonly="readonly"],
-  input[type="search"]:disabled,
-  input[type="search"][readonly="readonly"],
-  textarea.materialize-textarea:disabled,
-  textarea.materialize-textarea[readonly="readonly"] {
-    border-bottom: 1px solid #9e9e9e;
-  } 
-  [type="checkbox"].filled-in:not(:checked) + label:after {
-   
-    border: 2px solid $base-border-color;
-  
-}
-.wrong{padding-left: 3.8rem; color: $error}
-.input-field .prefix{
-    top: 10px;
-    right: 0;
-}
-
-  //---------------------------------
-  //Login Style
-  //---------------------------------
-  .loginContainer{
-     img.loginImage {
-      margin: 0 auto;
-      width:66%;
-     }
-     .input-field{
-       input[type='text'],
-       input[type='password']{
-         margin-bottom:0;
-       }
-      .validate{ margin-bottom:0;}}
-      .tatvamSubTagLine{
-        border-left: 5px solid $primary-color;
-        padding-left: .2rem;
-        font-size: 1.14rem;
-        font-weight: 600;
-      }
-  }
-
-
-  //-------------------------------
-  //Header Class
-  //-------------------------------
-  .header {
-    background-color: #fff;
-    border-bottom: 4px solid #f24443;
-    height: 60px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    width: 100%;
-  }
-
-  .subHeader{
-    width:calc(100% - 68px);
-  }
-  //ContentArea
- section.contentArea {
-    width: 100%;
-    float: left;
-    margin-top: 3rem;
-}
- //-------------------------------
-  //Footer
-  //-------------------------------
-  footer {
-    background-color: $bg-default-color;
-    border-top: 1px solid $grey;
-    box-shadow: 0px -4px 8px 0px $shadow;
-    font-size: 0.89rem;
-    .footer-copyright{
-      font-size:0.8rem;
-    .poweredBy {
-      color: $grey-1;
+    a {
+        cursor: pointer;
+        ul,
+        li,
+        div,
+        span,
+        p {
+            cursor: pointer;
+        }
     }
-    .brandOwner {
-      text-transform: uppercase;
-      color: $light-black;
+    s {
+        color: $red;
     }
-  }
-  } 
-
-
-.greyed {
-  color: $grey-1 !important;
-  label {
-    span {
-      color: $grey-1 !important;
+    .font-red {
+        color: $red;
     }
-    .lblextraCharges {
-      color: $grey-1 !important;
+    svg.circle {
+        border: 1px solid $secondary-color;
+        background-color: $secondary-color;
+        path {
+            fill: $white;
+        }
     }
-  }
-  .dataPrice {
-    color: $grey-1 !important;
-  }
-}
+    .base-font-size {
+        font-size: $base-font-size !important;
+    }
+    .font-primary {
+        color: $primary-color;
+    }
+    .font-default {
+        color: $default-color;
+    }
+    .font-primary-color {
+        color: $font-primary-color;
+    }
+    .font-interaction {
+        color: $interaction-color;
+    }
+    .light-grey-1 {
+        background-color: $default-bg-color;
+    }
+    .light-blue-1 {
+        background-color: $default-blue-color;
+    }
+    .strike {
+        color: $red;
+    }
+    h6.h6 {
+        font-size: 1.23rem;
+        font-weight: 500;
+        border-left: 3px solid $secondary-color;
+    }
+    .btn-prefixIcon {
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+    }
+    .btn-flat {
+        border: 1px solid #bac9d4;
+        color: $primary-color;
+    }
+    .darkslategray {
+        background-color: $black-dark;
+        color: $white;
+        border: 1px solid $black-dark;
+    }
+    .danger {
+        color: $red;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .ok {
+        color: $success;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .lightGrey {
+        background-color: $light-grey;
+    }
+    .draft {
+        background-color: $grey-1;
+        color: $white;
+    }
+    .Failed {
+        background-color: $red;
+        color: $white;
+    }
+    .Cancelled {
+        background-color: $black;
+        color: $white;
+    }
+    a.disabled {
+        background-color: $light-grey;
+        color: $light-black;
+        border: 1px solid $light-grey-2;
+    }
+    .defaultBox-shadow {
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.08);
+        a:focus {
+            outline: none;
+        }
+    }
+    .close {
+        color: $black;
+        cursor: pointer;
+    }
+    .maskedInput {
+        letter-spacing: 0.25rem;
+    }
+    .autocomplete-content {
+        position: absolute;
+    }
+    [type="radio"]:checked+label:after {
+        transform: scale(1.02);
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        top: 3px;
+        left: 3px;
+    }
+    [type="radio"]:checked+label:after,
+    [type="radio"].with-gap:checked+label:after {
+        background-color: $Ocean-Boat-Blue;
+    }
+    [type="radio"]:checked+label:after,
+    [type="radio"].with-gap:checked+label:before,
+    [type="radio"].with-gap:checked+label:after {
+        border: 2px solid $Ocean-Boat-Blue;
+    }
+    [type="radio"]:checked+label:before {
+        border: 2px solid $Ocean-Boat-Blue;
+    }
+    input:not([type]).invalid,
+    input:not([type]):focus.invalid,
+    input[type="text"].invalid,
+    input[type="text"]:focus.invalid,
+    input[type="password"].invalid,
+    input[type="password"]:focus.invalid,
+    input[type="email"].invalid,
+    input[type="email"]:focus.invalid,
+    input[type="url"].invalid,
+    input[type="url"]:focus.invalid,
+    input[type="time"].invalid,
+    input[type="time"]:focus.invalid,
+    input[type="date"].invalid,
+    input[type="date"]:focus.invalid,
+    input[type="datetime"].invalid,
+    input[type="datetime"]:focus.invalid,
+    input[type="datetime-local"].invalid,
+    input[type="datetime-local"]:focus.invalid,
+    input[type="tel"].invalid,
+    input[type="tel"]:focus.invalid,
+    input[type="number"].invalid,
+    input[type="number"]:focus.invalid,
+    input[type="search"].invalid,
+    input[type="search"]:focus.invalid,
+    textarea.materialize-textarea.invalid,
+    textarea.materialize-textarea:focus.invalid {
+        box-shadow: none;
+        border-bottom: 2px solid $red;
+    }
+    input:not([type]):focus:not([readonly]),
+    input[type="text"]:focus:not([readonly]),
+    input[type="password"]:focus:not([readonly]),
+    input[type="email"]:focus:not([readonly]),
+    input[type="url"]:focus:not([readonly]),
+    input[type="time"]:focus:not([readonly]),
+    input[type="date"]:focus:not([readonly]),
+    input[type="datetime"]:focus:not([readonly]),
+    input[type="datetime-local"]:focus:not([readonly]),
+    input[type="tel"]:focus:not([readonly]),
+    input[type="number"]:focus:not([readonly]),
+    input[type="search"]:focus:not([readonly]),
+    textarea.materialize-textarea:focus:not([readonly]) {
+        box-shadow: none;
+        border-bottom: 2px solid $Ocean-Boat-Blue;
+    }
+    input:not([type]):disabled,
+    input:not([type])[readonly="readonly"],
+    input[type="text"]:disabled,
+    input[type="text"][readonly="readonly"],
+    input[type="password"]:disabled,
+    input[type="password"][readonly="readonly"],
+    input[type="email"]:disabled,
+    input[type="email"][readonly="readonly"],
+    input[type="url"]:disabled,
+    input[type="url"][readonly="readonly"],
+    input[type="time"]:disabled,
+    input[type="time"][readonly="readonly"],
+    input[type="date"]:disabled,
+    input[type="date"][readonly="readonly"],
+    input[type="datetime"]:disabled,
+    input[type="datetime"][readonly="readonly"],
+    input[type="datetime-local"]:disabled,
+    input[type="datetime-local"][readonly="readonly"],
+    input[type="tel"]:disabled,
+    input[type="tel"][readonly="readonly"],
+    input[type="number"]:disabled,
+    input[type="number"][readonly="readonly"],
+    input[type="search"]:disabled,
+    input[type="search"][readonly="readonly"],
+    textarea.materialize-textarea:disabled,
+    textarea.materialize-textarea[readonly="readonly"] {
+        border-bottom: 1px solid #9e9e9e;
+    }
+    [type="checkbox"].filled-in:not(:checked)+label:after {
+        border: 2px solid $base-border-color;
+    }
+    .wrong {
+        padding-left: 3.8rem;
+        color: $error
+    }
+    .input-field .prefix {
+        top: 10px;
+        right: 0;
+    }
+    input{
+      height: 2rem!important;
+      line-height: 2rem!important;
+    }
+     //---------------------------------
+    //Login Style
+    //---------------------------------
+    .loginContainer {
+        img.loginImage {
+            margin: 0 auto;
+            width: 66%;
+        }
+        .input-field {
+            input[type='text'],
+            input[type='password'] {
+                margin-bottom: 0;
+            }
+            .validate {
+                margin-bottom: 0;
+            }
+        }
+        .tatvamSubTagLine {
+            border-left: 5px solid $primary-color;
+            padding-left: .2rem;
+            font-size: 1.14rem;
+            font-weight: 600;
+        }
+    } //-------------------------------
+    //Header Class
+    //-------------------------------
+    .header {
+        background-color: #fff;
+        border-bottom: 4px solid #f24443;
+        height: 60px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+    }
+    .subHeader {
+        width: calc(100% - 68px);
+    } //ContentArea
+    section.contentArea {
+        width: 100%;
+        float: left;
+        margin-top: 2rem;
+    } //-------------------------------
+    //Footer
+    //-------------------------------
+    footer {
+        background-color: $bg-default-color;
+        border-top: 1px solid $grey;
+        box-shadow: 0px -4px 8px 0px $shadow;
+        font-size: 0.89rem;
+        .footer-copyright {
+            font-size: 0.8rem;
+            .poweredBy {
+                color: $grey-1;
+            }
+            .brandOwner {
+                text-transform: uppercase;
+                color: $light-black;
+            }
+        }
+    }
+    .greyed {
+        color: $grey-1 !important;
+        label {
+            span {
+                color: $grey-1 !important;
+            }
+            .lblextraCharges {
+                color: $grey-1 !important;
+            }
+        }
+        .dataPrice {
+            color: $grey-1 !important;
+        }
+    }
 }

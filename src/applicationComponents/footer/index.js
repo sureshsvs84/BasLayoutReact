@@ -3,8 +3,7 @@ import AppFooter from './footer';
 import { brand } from 'appConstants';
 import { fetchSystemConfiguration } from '../../actions';
 
-const mapStateToProps = (state) => {    
-    debugger;
+const mapStateToProps = (state) => {  
     return {
         companyURL: brand.COMPANY_URL,
         brandURL: brand.URL,

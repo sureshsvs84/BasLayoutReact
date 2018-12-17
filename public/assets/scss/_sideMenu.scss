@@ -1,0 +1,192 @@
+
+.sideMenuCollapsed,.sideMenuUnCollapsed{
+    width: 50px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    padding: 10px;   
+   background-color: $side-menu-background;
+   padding-left: 0px;
+   padding-right: 0px;
+   text-align: center;
+    a {
+        font-size: 0.9rem;
+        display: block;
+        padding: 10px 5px 2px 5px;        
+    }
+    a.activeMenu{
+        background: $interaction-color;
+    }
+    a.sideMenuCloseBtn{
+        position: absolute;
+        left: 55px;
+    }
+    a.collapsedLogo{
+        position: relative;
+        bottom: 10px;
+    }
+    .clientBrandlogo{
+        width: 80%;
+        background-color: $footer-background;
+        padding: 10px 0 0px;
+    }
+    .greyBorder {
+        img {
+            width: 20px;  
+        }
+    }    
+    .menuIcon {
+        img {
+            width: 20px;
+        }
+    }
+}
+.sideMenuUnCollapsed{
+    width:250px;
+    position: absolute;
+    z-index: 10;
+}
+.sidenav{
+    width: 250px !important;
+    background-color: $side-menu-background !important;
+    .sideMenuCloseBtn{
+        position: absolute;
+        right: 5px;
+        top: 100px;
+    }
+    .expandedLogo{
+        img{
+            background: $brand-color;
+            padding: 15px;
+        }
+    }
+    .clientLogo{
+        width: 65%;
+    }
+     .collapsible-body{
+        ul{
+            background-color: #1f2933;
+        }
+        li{
+            a{
+                padding: 0 26.5px 0 50px!important;
+                color: #fff;
+            }
+        }
+       
+       
+    }
+    
+    .sideNavContent {
+        .collapsible-header {
+            color: #fff;
+            .menuText {
+                color:$font-secondary-color;
+                img {
+                    width: 20px;
+                    margin-right: 10px;
+                    position: relative;
+                    top: 4px;  
+                }
+                span {
+                    display: inline-block;
+                    margin-left: 15px;
+                }
+            }
+            img {
+                width: 20px;
+                margin-right: 10px;
+                position: relative;
+                top: 4px;  
+            }
+            span {
+                display: inline-block;
+                margin-left: 15px;
+            }
+        }
+        
+        
+    }
+    .sidenav-close {
+        text-align: center;
+        img {
+            width: 15px;
+            position: absolute;
+            top: 9px;
+            right: 7px;
+        }
+    }
+}
+.sidenav-overlay{
+    display: none !important;
+}
+
+ //SideNav VerticalMenu
+ .sideNav-vertical {
+    height: auto;
+    list-style: none;
+    width: 100%;
+    margin: 0px 0 0 0;
+    li {
+      height: 40px;
+      margin: 0;
+      padding: 5px 0;
+      background-color: #212B36;
+      border: none;
+      text-align: center;
+      display: inline-block;
+      float: left;
+      clear: both;
+      width: 50px;
+      /******* MODIFIED ********/
+      &:hover {
+        background-color: #21b6d7;
+        color: #FFFFFF;
+      }
+      a {             
+        font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 3px 5px 2px 5px;
+      }
+      &.current {
+        background-color: #F36F25;
+        a {
+          color: #FFFFFF;
+        }
+      }
+      ul {
+        display: none;
+        margin-top: 10px;
+        padding: 0;
+      }
+      &:hover {
+        ul {
+          display: block;
+        }
+        .sub-menu {
+          position: relative;
+          margin-top: -35.5px;
+        }
+      }
+    }
+  }
+  
+  .sub-menu li {
+    position: relative;
+    display: block;
+    top: -36px;
+    left: 100%;
+    width: 100%;
+    min-width: 195px;
+    white-space: nowrap;
+    z-index: 1;
+    text-align: left;
+    a {
+      display: inline-block;
+      padding: 0 10px;
+    }
+  }
+

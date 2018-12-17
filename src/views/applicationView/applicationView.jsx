@@ -30,8 +30,8 @@ class ApplicationView extends Component {
                     <CardPanel className="subHeader white fixed black-text mt-0">
                         <Row>
                             <Col s={3} className='pl-0'><QuickPeriodicity /></Col>
-                            <Col s={3} className='mt-4'> <DimensionFilter /></Col>
-                            <Col s={6} className='mt-3 right-align'><ExportPDF /></Col>
+                            <Col s={3} className='mt-2'> <DimensionFilter /></Col>
+                            <Col s={6} className='mt-2 right-align'><ExportPDF /></Col>
 
                         </Row>
                     </CardPanel>

@@ -1,65 +1,70 @@
-import React,{ Component,Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import MaterializeComponent from 'materialize-css';
 import { NavLink } from 'react-router-dom';
-import { sideMenu  } from './sideMenuData.js';
-import collapsedLogo from '../../../public/assets/images/collapsedLogo.png';
+import { sideMenu } from './sideMenuData.js';
+import collapsedLogo from '../../../public/assets/images/tatvam-logo.svg';
 import Logo from '../../../public/assets/images/tatvamLogo.svg';
 
-class SideMenu extends Component{
-    componentDidMount(){
-            // const sidnav = document.querySelectorAll('.sidenav');
-            // const sidnavInstances = MaterializeComponent.Sidenav.init(sidnav);
-            // const collapse = document.querySelectorAll('.collapsible');
-            // const collapseInstances = MaterializeComponent.Collapsible.init(collapse);    
-            // const tooltips = document.querySelectorAll('.tooltipped');
-            // const tooltipInstances = MaterializeComponent.Tooltip.init(tooltips);   
-          // Subscribe to 'attarctionList' store data modifications
+class AppSideMenu extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isMenuPanel:true
+        }
     }
-    render(){    
-          const sideMenus = sideMenu;
-        return(
+
+    MenuClick = (menuAction) => {
+        this.props.actions[menuAction.menuFun]();
+    }
+
+    toggleMenuBtn = () =>{
+         this.setState({isMenuPanel:!this.state.isMenuPanel})
+    }
+    render() {
+        debugger;
+        const sideMenus = sideMenu;
+        return (
             <Fragment>
-                    {/* <ul id="slide-out" className="sidenav collapsible">
-                    <a className="btn-floating sidenav-close sideMenuCloseBtn waves-effect waves-light"><i className="zmdi zmdi-close"></i></a>
-                    <NavLink to={'/dashboard'} className="expandedLogo">
-                        <img src={Logo} width='250' alt="Intertek Logo" />
-                    </NavLink>
-                    <li className="sideNavContent">                                              
+                <div className={ this.state.isMenuPanel ? 'sideMenuCollapsed' : 'sideMenuUnCollapsed'}>
+                    <a onClick={this.toggleMenuBtn}> {this.state.isMenuPanel ? <i class="material-icons left">menu</i> : <i class="material-icons right">close</i>}</a>
+                       <ul className="sideNav-vertical">
                         {
-                            sideMenus.map((iteratedMenu,i)=>{
+                            sideMenus.map((iteratedMenu, i) => {
                                 return (
-                                    <div className="collapsible-header" key={i}> 
-                                        <NavLink to={'/'+iteratedMenu.menuTitle} className='sidenav-close menuText'>
-                                            <img src={iteratedMenu.menuIcon} />
-                                            {iteratedMenu.pageTitle}
-                                        </NavLink>
-                                    </div>
+                                    <li key={i}>
+                                        {iteratedMenu.subMenu.length > 0 ? <a className="greyBorder">  <img alt={iteratedMenu.viewUrl} src={iteratedMenu.menuIcon} /> </a> :
+                                            <NavLink to={'/' + iteratedMenu.viewUrl} data-position="right" data-tooltip={iteratedMenu.subMenu.length === 0 ? iteratedMenu.menuText : null} key={i} className={iteratedMenu.subMenu.length === 0 ? 'tooltipped greyBorder' : 'greyBorder'} activeClassName='activeMenu'>
+                                                <img alt={iteratedMenu.viewUrl} src={iteratedMenu.menuIcon} />
+                                            </NavLink>
+                                        }
+                                        {iteratedMenu.subMenu.length > 0 && <ul className="sub-menu">
+                                            {iteratedMenu.subMenu.length > 0 && iteratedMenu.subMenu.map((subMenu, j) => {
+                                                return (
+
+                                                    <li key={j}>
+                                                        <NavLink to={'/' + subMenu.viewUrl} key={i} className='greyBorder'>
+                                                            {subMenu.menuText}
+                                                        </NavLink>
+                                                    </li>
+
+                                                );
+
+                                            })
+                                            }
+                                        </ul>}
+
+                                    </li>
+
                                 );
                             })
                         }
-                        
-                    </li>                           
-                            
-                    </ul> */}
-                    <div className='sideMenuCollapsed hide-on-med-and-down'>                    
-                        <a href="#" data-target="slide-out" className="ml-1 menuIcon sidenav-trigger sideMenuCloseBtn waves-effect waves-light"><i className="zmdi zmdi-menu"></i></a>
-                        <NavLink to={'/dashboard'} className='collapsedLogo p-0 tooltipped' data-position="right" data-tooltip={"Home"}>
-                            <img src={collapsedLogo} width="50" alt="Intertek Logo"/>
-                        </NavLink>
-                        {
-                            sideMenus.map((iteratedMenu,i)=>{
-                                return (                                    
-                                        <NavLink to={'/'+iteratedMenu.menuTitle} data-position="right" data-tooltip={iteratedMenu.toolTipText} key={i} className='tooltipped greyBorder' activeClassName='activeMenu'>
-                                            <img src={iteratedMenu.menuIcon} />
-                                        </NavLink> 
-                                    );
-                            })
-                        }
-                    </div>
-                    
+                    </ul>
+                </div>
+                {!this.state.isMenuPanel && <div className="overlay"></div> }
+
             </Fragment>
         );
     }
 }
 
-export default SideMenu;
+export default AppSideMenu;

@@ -4,6 +4,8 @@ body{
         height: calc(100% - 60px);
         position: absolute;        
         background-color: #3e3e3e;
+        top:60px;
+        padding-top:0;
         span{
             position: fixed;
             z-index: 1000;
@@ -34,6 +36,16 @@ body{
         box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
         padding: 5px 10px 5px 15px;
     } 
+    .overlay {
+        width: calc(100% - 250px);
+        background-color: #000;
+        height: 100%;      
+        z-index: 11;
+        position: absolute;
+        top: 0px;
+        opacity: 0.5;
+        right: 0;
+    }
 }
 @media only screen and (max-width: 992px){
     .pageContainer{

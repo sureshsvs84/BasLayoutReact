@@ -25,7 +25,7 @@ class AppHeader extends Component {
         return (
             <Fragment>
                 <Row className="header">
-                    <Col s={12}>
+                    <Col s={12} className="pl-0">
                        <Col s={4}>{Img}</Col>
                        <Col s={8} className='align-right'>  
                                 <Col  className="mt-3 right">
@@ -42,7 +42,7 @@ class AppHeader extends Component {
                         <Col s={1} className="mt-3 right">
                                 <Icon>notifications</Icon>
                             </Col>
-                        <Col s={4} className="right attractionFrame">
+                        <Col s={4} className=" mt-2 right attractionFrame">
                                 <Attraction />
                             </Col>
                         </Col>
