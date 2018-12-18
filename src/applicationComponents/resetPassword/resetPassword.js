@@ -1,8 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Input, Button, Col, Icon } from 'react-materialize';
+import { Input, Button, Row, Col, Icon } from 'react-materialize';
 import { Link } from 'react-router-dom';
 import './resetPassword.scss';
+import brantLogo from '../../../public/assets/images/tatvamLogo.svg';
+import TatvamInput from '../../baseComponents/tatvamInput';
+import TatvamButton from '../../baseComponents/TatvamButton';
+import TatvamIcon from '../../baseComponents/TatvamIcon';
 
 class ResetPassword extends Component {
     constructor(props) {
@@ -62,57 +66,49 @@ class ResetPassword extends Component {
 
         return (
             <Fragment>
-                <Col xl={8} l={8} m={6} s={12} className="text-center rightBorder tagLine resetPage">
-                    <div className="">
-                        <span>Reset Password</span>
-                        <p className="pt-2 passInstruction">Welcome,Please update your password during the first time log in.</p>
-                    </div>
-                    <form className="pt-2" name="form" onSubmit={this.handleSubmit}>
-                        <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                            <label htmlFor="">User Name</label>
-                            <Input type='text' name="username" onChange={this.handleChange}><Icon>account_circle</Icon></Input>
-                            {submitted && !username &&
-                                <div className="help-block">Username is required</div>
-                            }
-                        </div>
-                        <div className={'form-group' + (submitted && !userEmail ? ' has-error' : '')}>
-                            <label htmlFor="">Enter Your Email</label>
-                            <Input type='email' name="userEmail" onChange={this.handleChange}><Icon>contact_mail</Icon></Input>
-                            {submitted && !userEmail &&
-                                <div className="help-block">Email is required</div>
-                            }
-                        </div>
-                        <div className={'form-group' + (submitted && !oldPassword ? ' has-error' : '')}>
-                            <label htmlFor="">Enter Old Password</label>
-                            <Input type='password' name="oldPassword" onChange={this.handleChange}><Icon>lock</Icon></Input>
-                            {submitted && !oldPassword &&
-                                <div className="help-block">Password is required</div>
-                            }
-                        </div>
-                        <div className={'form-group' + (submitted && !newPassword ? ' has-error' : '')}>
-                            <label htmlFor="">Enter New Password</label>
-                            <Input type='password' name="newPassword" onKeyUp={this.passCheck} id="password1" onChange={this.handleChange}><Icon>lock</Icon></Input>
-                            {submitted && !newPassword &&
-                                <div className="help-block">New Password is required</div>
-                            }
-                        </div>
-                        <div className={'form-group' + (submitted && !confirmPassword ? ' has-error' : '')}>
-                            <label htmlFor="">Confirm Password</label><span id='message'></span>
-                            <Input type='password' name="confirmPassword" onKeyUp={this.passCheck} id="confirm_password" onChange={this.handleChange}><Icon>lock</Icon></Input>
-                            {submitted && !confirmPassword &&
-                                <div className="help-block">Confirm Password is required</div>
-                            }
-                        </div>
+            <Col s={12} m={6} l={8} xl={10} className="mb-2 pl-4">
 
-                        <div className="form-group text-right">
-                            <a href="/tatvam-web">Back To Login</a>
-                        </div>                       
-                        <div className="form-group">
-                            <Button waves='light'>Submit</Button>
-                        </div>
+                <img src={brantLogo} />
+                <h6 className="pl-1">
+                Reset Password
+                </h6>
+                <p className="pl-1">Welcome,Please update your password during the first time log in.</p>
+            </Col>
+            <Col s={12} m={6} l={8} xl={11}>
+                <form name="form" onSubmit={this.handleSubmit}>                             
+                    <Row>
+                    <TatvamInput s={12} label="User Name" validate={submitted && !username} type='text' name="userName"  onChange={this.handleChange}></TatvamInput>
+                    {submitted && !username &&
+                            <div className="helper-text wrong">User Name is required</div>
+                        }
+                    <TatvamInput s={12} label="Enter Your Email" validate={submitted && !userEmail} type='email' name="userEmail"  onChange={this.handleChange}></TatvamInput>
+                    {submitted && !userEmail &&
+                            <div className="helper-text wrong">Email is required</div>
+                        }
+                    <TatvamInput s={12} label="Enter Old Password" validate={submitted && !oldPassword} type='password' name="oldPassword"  onChange={this.handleChange}></TatvamInput>
+                    {submitted && !oldPassword &&
+                            <div className="helper-text wrong">Old Password is required</div>
+                        }
+                    <TatvamInput s={12} label="Enter New Password" validate={submitted && !newPassword} type='password' name="oldPassword"  onChange={this.handleChange}></TatvamInput>
+                    {submitted && !newPassword &&
+                            <div className="helper-text wrong">New Password is required</div>
+                        }
+                         <TatvamInput s={12} label="Confirm Password" validate={submitted && !confirmPassword} type='password' name="confirmPassword"  onChange={this.handleChange}></TatvamInput>
+                    {submitted && !confirmPassword &&
+                            <div className="helper-text wrong">Confirm Password is required</div>
+                        }
+                   
+                    </Row> 
 
-                    </form>
-                </Col>
+                  
+                    <Col s={12} className=" pl-0 pl-2 mt-3">
+                        <TatvamButton waves='light'>submit </TatvamButton>
+                        <span className="right mt-2"><a href="/tatvam-web/">Back to Login ?</a></span>
+                       
+                    </Col>
+                  
+                </form>
+            </Col>
             </Fragment>
         );
     }

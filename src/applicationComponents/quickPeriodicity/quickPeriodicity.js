@@ -18,10 +18,10 @@ class QuickPeriodicity extends Component {
         return (
             <Fragment>
                 <Row className="quickPeriodicity">
-                 <Col s={1} className="dateIcon">
+                 <Col s={1} className="dateIcon p-0">
                     <TatvamIcon left>date_range</TatvamIcon>
                  </Col>              
-                <Col s={11} className="dataDropdown">
+                <Col s={11} className="dataDropdown p-0">
                     <TatvamInput type='select' defaultValue='Last6months' onChange={this.__onQuickPeriodicityChange.bind(this)}>
                         <option value='CurrentMonth'>Current Month</option>
                         <option value='Last3months'>Last 3 Months</option>

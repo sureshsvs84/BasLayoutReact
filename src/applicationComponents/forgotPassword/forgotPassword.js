@@ -1,8 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Input, Button, Col, Icon } from 'react-materialize';
+import { Input, Button, Col, Row, Icon } from 'react-materialize';
 import { Link } from 'react-router-dom';
+import brantLogo from '../../../public/assets/images/tatvamLogo.svg';
 import './forgotPassword.scss';
+import TatvamInput from '../../baseComponents/tatvamInput';
+import TatvamButton from '../../baseComponents/TatvamButton';
+import TatvamIcon from '../../baseComponents/TatvamIcon';
+
 
 class ForgotPassword extends Component {
     constructor(props) {
@@ -30,28 +35,34 @@ class ForgotPassword extends Component {
         const { username, submitted } = this.state;        
         return (
             <Fragment>
-                <Col xl={8} l={8} m={6} s={12} className="text-center rightBorder tagLine forgotPage">
-                    <div>
-                        <span>Forgot Your Password ?</span>
-                        <p className="pt-2 passInstructionHeading">Please enter your registered Email id. Password reset instruction will be sent you by mail.</p>
-                    </div>
-                    <form className="pt-2" name="form" onSubmit={this.handleSubmit}>
-                        <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                            <label htmlFor="username">Enter Your Email</label>
-                            <Input type='email' name="username" onChange={this.handleChange}><Icon>contact_mail</Icon></Input>
-                            {submitted && !username &&
-                                <div className="help-block">Username is required</div>
-                            }
-                        </div>
-                        <div className="form-group text-right">
-                            <a href="/tatvam-web">Back To Login</a>
-                        </div>
-                        <div className="form-group">
-                            <Button waves='light'>Send</Button>
-                        </div>
+            <Col s={12} m={6} l={8} xl={10} className="mb-2 pl-4 offset-xl1">
 
-                    </form>
-                </Col>
+                <img src={brantLogo} />
+                <h6 className="pl-1">
+                Forgot Your Password ?
+                </h6>
+                <p className="pl-1">Please enter your registered Email id. Password reset instruction will be sent you by mail.</p>
+            </Col>
+            <Col s={12} m={6} l={8} xl={11}>
+                <form name="form" onSubmit={this.handleSubmit}>                             
+                    <Row>
+                    <TatvamInput s={12} label="Enter Email ID" validate={submitted && !username} type='email' name="emailID"  onChange={this.handleChange}><TatvamIcon>email</TatvamIcon></TatvamInput>
+                    {submitted && !username &&
+                            <div className="helper-text wrong">Email ID is required</div>
+                        }
+                   
+                    </Row> 
+
+                    <Col className='form-group right pr-3'>
+                        <a href="/tatvam-web/">Back to Login ?</a>
+                    </Col>
+                    <Col s={12} className="offset-s2 pl-0">
+                        <TatvamButton waves='light'>Send<TatvamIcon right>email</TatvamIcon></TatvamButton>
+                       
+                    </Col>
+                  
+                </form>
+            </Col>
             </Fragment>
         );
     }

@@ -19,8 +19,9 @@ class LoginView extends Component {
                         <Col s={12} m={4}  l={4}  xl={4} className="ml-5 mt-5" >
                             <SignIn />
                         </Col>
+                        <Footer />
                     </Row>
-                    <Footer />
+                   
                 
             </Fragment>
         );

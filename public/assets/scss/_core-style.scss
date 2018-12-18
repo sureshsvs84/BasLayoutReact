@@ -353,23 +353,29 @@ body {
     .input-field .prefix {
         top: 10px;
         right: 0;
+        position: absolute;
+        width: 2rem;
+        font-size: 1.5rem;
     }
     input{
       height: 2rem!important;
       line-height: 2rem!important;
+      padding-bottom: 0.2rem!important;
     }
      //---------------------------------
     //Login Style
     //---------------------------------
-    .loginContainer {
+    .loginContainer,.forgotpassword,.resetpassword  {
         img.loginImage {
             margin: 0 auto;
             width: 66%;
         }
         .input-field {
             input[type='text'],
-            input[type='password'] {
-                margin-bottom: 0;
+            input[type='password'],
+            input[type='email'],
+            input[type='number'] {
+                margin-bottom: 5px;
             }
             .validate {
                 margin-bottom: 0;
@@ -381,7 +387,17 @@ body {
             font-size: 1.14rem;
             font-weight: 600;
         }
-    } //-------------------------------
+        footer{
+            position:fixed;
+        }
+    }
+    .resetpassword{
+        footer{
+            position: static;
+            float: left;
+        }
+    }
+    //-------------------------------
     //Header Class
     //-------------------------------
     .header {
@@ -390,6 +406,8 @@ body {
         height: 60px;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
         width: 100%;
+        position: fixed;
+        z-index: 5;
     }
     .subHeader {
         width: calc(100% - 68px);
@@ -397,7 +415,8 @@ body {
     section.contentArea {
         width: 100%;
         float: left;
-        margin-top: 2rem;
+        margin-top: 5.2rem;
+        min-height: calc(100vh * (6.2/12));
     } //-------------------------------
     //Footer
     //-------------------------------
@@ -431,4 +450,40 @@ body {
             color: $grey-1 !important;
         }
     }
+    .container-fluid{
+    .mainPage{
+          display:inline-block;
+        header{
+            .notification{
+                span.notifiCount{              
+                    background-color: #039be5;
+                    color: #fff;
+                    position: relative;                 
+                    border-radius: 100%;
+                    padding: 3px;
+                    font-size: 11px;
+                    top: -13px;                   
+                    text-align: center;
+                    left: -12px;
+                    font-weight: 600;
+                    box-shadow: 1px 1px 1px 0px #cccc;
+                    float: right;
+                    height: 22px;
+                    width: 22px;
+                }
+            }
+            .dropdown-button{
+                i.left{
+                    margin-right:0;
+                }
+            }
+
+        }
+        footer{
+            width: calc(101% - 65px);
+            margin-left: 3rem;
+        }
+    }
+}
+
 }

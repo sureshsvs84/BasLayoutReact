@@ -1,14 +1,11 @@
 body{
     .pageContainer{
         width: calc(100% - 50px);
-        left: 50px;
-        position: relative;
-        padding:.5rem;
-        .contentSection{
-            position: fixed;
-            overflow-y: auto;
-            max-height: calc(100% - 172px);
-        }
+        padding: .5rem;
+        margin-left: 3.2rem;
+        margin-top: 3.5rem;
+        display: inline-block;
+        height: 100%;
     }  
     .customCard{
         margin: .5rem;

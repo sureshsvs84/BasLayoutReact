@@ -22,7 +22,7 @@ class AppSideMenu extends Component {
          this.setState({isMenuPanel:!this.state.isMenuPanel})
     }
     render() {
-        debugger;
+
         const sideMenus = sideMenu;
         return (
             <Fragment>
@@ -30,7 +30,7 @@ class AppSideMenu extends Component {
                 <Col s={12} className="bb-5 expandedLogo">
                    <img src={Logo}/>
                 </Col>
-                    <a onClick={this.toggleMenuBtn}> {this.state.isMenuPanel ? <i class="material-icons left">menu</i> : <i class="material-icons right">close</i>}</a>
+                    <a onClick={this.toggleMenuBtn}> {this.state.isMenuPanel ? <i class="material-icons left menu">menu</i> : <i class="material-icons right">close</i>}</a>
                        <ul className="sideNav-vertical">
                         {
                             sideMenus.map((iteratedMenu, i) => {
@@ -38,7 +38,7 @@ class AppSideMenu extends Component {
                                     <li key={i}>
                                         {iteratedMenu.subMenu.length > 0 ? <a className="greyBorder">  <img alt={iteratedMenu.viewUrl} src={iteratedMenu.menuIcon} /> </a> :
                                             <NavLink to={'/' + iteratedMenu.viewUrl} data-position="right" data-tooltip={iteratedMenu.subMenu.length === 0 ? iteratedMenu.menuText : null} key={i} className={iteratedMenu.subMenu.length === 0 ? 'tooltipped greyBorder' : 'greyBorder'} activeClassName='activeMenu'>
-                                                <img alt={iteratedMenu.viewUrl} src={iteratedMenu.menuIcon} />
+                                                <img alt={iteratedMenu.viewUrl} src={iteratedMenu.menuIcon} /> {!this.state.isMenuPanel && <span>{iteratedMenu.menuText}</span>}
                                             </NavLink>
                                         }
                                         {iteratedMenu.subMenu.length > 0 && <ul className="sub-menu">

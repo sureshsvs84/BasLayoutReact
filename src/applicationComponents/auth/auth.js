@@ -43,7 +43,6 @@ class SignIn extends Component {
     }
 
     render() {
-        debugger;
         const { loggingIn } = this.props;
         const { username, password, submitted } = this.state;
         return (
@@ -65,20 +64,6 @@ class SignIn extends Component {
                         }
                     </Row> 
 
-                     {/* <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                        <label htmlFor="username">Username</label>
-                        <TatvamInput type='text' placeholder="Enter user name" name="username" value={username} onChange={this.handleChange}><TatvamIcon>account_circle</TatvamIcon></TatvamInput>
-                        {submitted && !username &&
-                            <div className="help-block">Username is required</div>
-                        }
-                    </div>
-                    <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                        <label htmlFor="password">Password</label>
-                        <TatvamInput type='password' placeholder="Enter your password" name='password' value={password} onChange={this.handleChange}><TatvamIcon>lock</TatvamIcon></TatvamInput>
-                        {submitted && !password &&
-                            <div className="help-block">Password is required</div>
-                        }
-                    </div> */}
                     <TatvamCol className='form-group right pr-3'>
                         <a href="/tatvam-web/forgotpassword">Forgot Password?</a>
                     </TatvamCol>

@@ -11,14 +11,26 @@
    padding-right: 0px;
    text-align: center;  
    height: calc(100% - 60px);
-   position: absolute;        
+   position: fixed;
+   z-index:5px;        
    background-color: #3e3e3e;
    top:60px;
    padding-top:0;
+   -webkit-transition: all 0.3s ease;
+   -moz-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+   -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     a {
         font-size: 0.9rem;
         display: block;
-        padding: 10px 5px 2px 5px;        
+        padding: 10px 5px 2px 5px;
+        i.menu{
+            position: relative;
+            left: 8px;
+            top: -5px;
+            color: #fff;
+        }        
     }
     a.activeMenu{
         background: $interaction-color;
@@ -140,6 +152,7 @@
     padding-top: 0;
     top: 0;
     height: 100%;
+   
     .expandedLogo{
         border-bottom: 5px solid #d0011b;
         img{
@@ -160,6 +173,24 @@
             font-size: 18px;
             color: #fff;
         }
+        span{
+            top: -3px;
+            position: relative;
+        }
+    }
+    .sideNav-vertical {
+        li{width:100%;
+            text-align:left;
+
+            a{text-align: left;}
+
+            .sub-menu {
+                li{
+                    left:100%;
+                }
+            }
+        }
+
     }
 }
 
@@ -167,8 +198,8 @@
     width: calc(100% - 250px);
     background-color: #000;
     height: 100%;      
-    z-index: 11;
-    position: absolute;
+    z-index: 9;
+    position: fixed;
     top: 0px;
     opacity: 0.5;
     right: 0;
