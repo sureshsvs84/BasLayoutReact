@@ -50,20 +50,6 @@ class AppHeader extends Component {
                         
                     </Col>
                 </Row>
-                   
-
-                {/* <Navbar brand={Img} href={brandURL} right fixed className='customNav' > */}
-                {/* <Attraction />                    */}
-                    {/* <NavItem href='#' ></NavItem> */}
-                    {/* <NavItem href='#'><Icon>notifications</Icon></NavItem> */}
-                   
-                    {/* <NavItem>
-                        <Icon left>person</Icon>
-                        <span>{userDisplayName}</span>
-                    </NavItem> */}
-
-                    {/* <NavItem onClick={(event) => this.handleLogoutClick(this.props)}><Icon>logout</Icon></NavItem> */}
-                {/* </Navbar> */}
             </Fragment>
         );
     }

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import MaterializeComponent from 'materialize-css';
+
 import { NavLink } from 'react-router-dom';
+import { Col,Row } from 'react-materialize';
 import { sideMenu } from './sideMenuData.js';
 import collapsedLogo from '../../../public/assets/images/tatvam-logo.svg';
 import Logo from '../../../public/assets/images/tatvamLogo.svg';
@@ -25,7 +26,10 @@ class AppSideMenu extends Component {
         const sideMenus = sideMenu;
         return (
             <Fragment>
-                <div className={ this.state.isMenuPanel ? 'sideMenuCollapsed' : 'sideMenuUnCollapsed'}>
+                <Row className={ this.state.isMenuPanel ? 'sideMenuCollapsed' : 'sideMenuUnCollapsed'}>
+                <Col s={12} className="bb-5 expandedLogo">
+                   <img src={Logo}/>
+                </Col>
                     <a onClick={this.toggleMenuBtn}> {this.state.isMenuPanel ? <i class="material-icons left">menu</i> : <i class="material-icons right">close</i>}</a>
                        <ul className="sideNav-vertical">
                         {
@@ -59,8 +63,8 @@ class AppSideMenu extends Component {
                             })
                         }
                     </ul>
-                </div>
-                {!this.state.isMenuPanel && <div className="overlay"></div> }
+                </Row>
+                {!this.state.isMenuPanel && <div className="sidenav-overlay"></div> }
 
             </Fragment>
         );
